@@ -1,8 +1,16 @@
 # Carbon World
  Carbon World - Gymnasiearbete - Sundsgymnasiet - 2023 
 
-The test and public version of the game Carbon World, where I test tutorials and features before implementing it to the main project
+## Table of Contents 
+## Unity Version
+This project is developed using Unity [VERSION_NUMBER].
 
-First tutorials used for this project:
-[How to make a 2D topdown game - Unity Tutorial](https://www.youtube.com/watch?v=7iYWpzL9GkM)
+## Project Description
+Carbon World is a game developed as part of my high school project at Sundsgymnasiet in 2023. It serves as a testing ground for tutorials and features before implementing them into the main project.
+
+
+## Tutorials Used
+- [How to make a 2D topdown game - Unity Tutorial](https://www.youtube.com/watch?v=7iYWpzL9GkM)
+    ![YouTube Video Preview](https://img.youtube.com/vi/7iYWpzL9GkM/maxresdefault.jpg)
+
 
