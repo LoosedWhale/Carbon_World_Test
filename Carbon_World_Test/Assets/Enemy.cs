@@ -22,15 +22,15 @@ public class Enemy : MonoBehaviour
     public float health = 1;
 
 
-    //private void Start() {
-    //    animator = GetComponent<Animator>();
-    //}
+    private void Start() {
+        animator = GetComponent<Animator>();
+    }
 
-    //public void Defeated(){
-    //    animator.SetTrigger("Defeated");
-    //}
+    public void Defeated(){
+        animator.SetTrigger("Defeated");
+    }
 
-        public void Defeated() {
+        public void RemoveEnemy() {
             Destroy(gameObject);
         }
     }
