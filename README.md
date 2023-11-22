@@ -14,5 +14,5 @@ Carbon World is a game developed as part of my high school project at Sundsgymna
     ![YouTube Video Preview](https://img.youtube.com/vi/7iYWpzL9GkM/maxresdefault.jpg)
 
 
-- [How to make a 2D topdown game - Unity Tutorial part 2 ] (https://www.youtube.com/watch?v=8rTK68omQow)
+- [How to make a 2D topdown game - Unity Tutorial part 2 ](https://www.youtube.com/watch?v=8rTK68omQow)
     ![YouTube Video Preview](https://img.youtube.com/vi/8rTK68omQow/maxresdefault.jpg)
