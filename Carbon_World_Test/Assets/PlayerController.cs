@@ -30,18 +30,34 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate() {
         // If movement input is not 0, try to move
         if (movementInput != Vector2.zero) {
-            int count = rb.Cast(
-                movementInput, 
-                movementFilter,
-                castCollision,
-                moveSpeed * Time.fixedDeltaTime + collisionOffset);
+            bool success = TryMove(movementInput.normalized);
 
-            if (count == 0) {
-                rb.MovePosition(rb.position + movementInput * moveSpeed * Time.fixedDeltaTime);
+            if (!success) {
+                // If movement fails, try to move in the X direction
+                success = TryMove(new Vector2(movementInput.x, 0).normalized);
+
+                if (!success) {
+                    // If movement fails, try to move in the Y direction
+                    success = TryMove(new Vector2(0, movementInput.y).normalized);
+                }
             }
         }
     }
 
+    private bool TryMove(Vector2 direction){
+        int count = rb.Cast(
+                direction, // X and Y direction values between -1 and 1
+                movementFilter, // Filter for what objects to collide with
+                castCollision, // List of collisions 
+                moveSpeed * Time.fixedDeltaTime + collisionOffset); // The amount to cast equal to the movement plus an offset to prevent clipping
+
+            if (count == 0) {
+                rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+                return true;
+            } else {
+                return false;
+            }
+    }
     void OnMove(InputValue movementValue)
     {
         movementInput = movementValue.Get<Vector2>();
