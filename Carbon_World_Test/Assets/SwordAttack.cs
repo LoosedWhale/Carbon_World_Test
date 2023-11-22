@@ -31,11 +31,11 @@ public class SwordAttack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Enemy") {
             // Deal damage to the enemy
-            //Enemy enemy = other.GetComponent<Enemy>();
+            Enemy enemy = other.GetComponent<Enemy>();
 
-            //f(enemy != null) {
-            //    enemy.Health -= damage;
-            //}
+            if(enemy != null) {
+                enemy.Health -= damage;
+            }
         }
     }
 }
