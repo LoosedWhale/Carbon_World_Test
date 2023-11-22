@@ -4915,6 +4915,39 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1199701796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3727454296626517836, guid: 58b946bcda9aace47b95a6b783437bbf, type: 3}
+  m_PrefabInstance: {fileID: 8364841821929070469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1199701797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199701796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1d6e807e7180148b548c73d6e30886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  collisionOffset: 0.05
+  movementFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!1 &1371043147
 GameObject:
   m_ObjectHideFlags: 0
@@ -5257,7 +5290,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -5484,6 +5517,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5042277443047243522, guid: 58b946bcda9aace47b95a6b783437bbf, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 483ac222ba1b0da438c64583125fd544, type: 3}
+    - target: {fileID: 5042277443047243522, guid: 58b946bcda9aace47b95a6b783437bbf, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5312331298110724718, guid: 58b946bcda9aace47b95a6b783437bbf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5527,7 +5568,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3727454296626517836, guid: 58b946bcda9aace47b95a6b783437bbf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1199701797}
   m_SourcePrefab: {fileID: 100100000, guid: 58b946bcda9aace47b95a6b783437bbf, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
