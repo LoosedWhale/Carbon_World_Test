@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     Vector2 movementInput;
     Rigidbody2D rb;
+    Animator animator;
 
     List<RaycastHit2D> castCollision = new List<RaycastHit2D>();
 
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -41,7 +43,13 @@ public class PlayerController : MonoBehaviour
                     success = TryMove(new Vector2(0, movementInput.y).normalized);
                 }
             }
+
+            animator.SetBool("isMoving", success);
+        } else {
+            animator.SetBool("isMoving", false);
         }
+
+
     }
 
     private bool TryMove(Vector2 direction){
